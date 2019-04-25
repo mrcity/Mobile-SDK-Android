@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -118,6 +119,14 @@
                 android:layout_marginRight="10dp"
                 android:text="Change Video Source" />
 
+            <ImageView
+                android:id="@+id/frame_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_show_current_video_source"
+                app:srcCompat="@drawable/aircraft" />
+
         </RelativeLayout>
     </ScrollView>
+
 </merge>
