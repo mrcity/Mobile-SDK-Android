@@ -2,13 +2,20 @@ package com.dji.sdk.sample.demo.camera;
 
 import android.app.Service;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Point;
+import android.graphics.Rect;
+import android.media.Image;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.dji.sdk.sample.R;
@@ -17,9 +24,18 @@ import com.dji.sdk.sample.internal.utils.Helper;
 import com.dji.sdk.sample.internal.utils.ToastUtils;
 import com.dji.sdk.sample.internal.utils.VideoFeedView;
 import com.dji.sdk.sample.internal.view.PresentableView;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.ml.vision.FirebaseVision;
+import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
+import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetector;
+import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetectorOptions;
+import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import dji.sdk.base.BaseProduct;
@@ -58,6 +74,8 @@ public class LiveStreamView extends LinearLayout implements PresentableView, Vie
     private LiveStreamManager.OnLiveChangeListener listener;
     private LiveStreamManager.LiveStreamVideoSource currentVideoSource = LiveStreamManager.LiveStreamVideoSource.Primary;
 
+    private boolean isProcessingFrame = false;
+
     public LiveStreamView(Context context) {
         super(context);
         initUI(context);
@@ -70,8 +88,76 @@ public class LiveStreamView extends LinearLayout implements PresentableView, Vie
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Service.LAYOUT_INFLATER_SERVICE);
         layoutInflater.inflate(R.layout.view_live_stream, this, true);
 
+        // My stuff
+        final ImageView frameView = (ImageView) findViewById(R.id.frame_view);
+
+        FirebaseVisionBarcodeDetectorOptions options =
+                new FirebaseVisionBarcodeDetectorOptions.Builder()
+                        .setBarcodeFormats(
+                                FirebaseVisionBarcode.FORMAT_QR_CODE)
+                        .build();
+
+        final FirebaseVisionBarcodeDetector detector = FirebaseVision.getInstance()
+                .getVisionBarcodeDetector();
+        // end my stuff mostly except for the listener stuff
+
         primaryVideoFeedView = (VideoFeedView) findViewById(R.id.video_view_primary_video_feed);
         primaryVideoFeedView.registerLiveVideo(VideoFeeder.getInstance().getPrimaryVideoFeed(), true);
+        primaryVideoFeedView.setCustomObjectListener(new VideoFeedView.MyCustomObjectListener() {
+            @Override
+            public void onBitmapReady(Bitmap bitmap) {
+                //Log.d(DJISampleApplication.TAG, "New frame detected; TODO - run ML object detection here");
+                /*runInBackground(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                final long startTime = SystemClock.uptimeMillis();
+                                final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
+                                lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
+                                LOGGER.i("Detect: %s", results);
+                                cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
+                                if (resultsView == null) {
+                                    resultsView = (ResultsView) findViewById(R.id.results);
+                                }
+                                resultsView.setResults(results);
+                                requestRender();
+                                readyForNextImage();
+                            }
+                        });
+                        */
+                frameView.setImageBitmap(bitmap);
+                if (!isProcessingFrame) {
+                    isProcessingFrame = true;
+                    Log.d(DJISampleApplication.TAG, "Looking for QR Code in image " + bitmap.getWidth() + " x " + bitmap.getHeight());
+                    final FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+                    Task<List<FirebaseVisionBarcode>> result = detector.detectInImage(image)
+                            .addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionBarcode>>() {
+                                @Override
+                                public void onSuccess(List<FirebaseVisionBarcode> barcodes) {
+                                    // Task completed successfully
+                                    isProcessingFrame = false;
+                                    Log.d(DJISampleApplication.TAG, "Success! Found " + barcodes.size() + " barcodes");
+                                    for (FirebaseVisionBarcode barcode : barcodes) {
+                                        String qrValue = barcode.getRawValue();
+                                        Rect bounds = barcode.getBoundingBox();
+                                        Point[] corners = barcode.getCornerPoints();
+                                        Log.d(DJISampleApplication.TAG, "Barcode found! [" + qrValue + "] at [" + bounds.toShortString()
+                                                + "], or CW from top left [" + corners[0] + ", "  + corners[1] + ", "  + corners[2] + ", "  + corners[3] + "]");
+                                    }
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Task failed with an exception
+                                    e.printStackTrace();
+                                    isProcessingFrame = false;
+                                }
+                            });
+
+                }
+            }
+        });
 
         fpvVideoFeedView = (VideoFeedView) findViewById(R.id.video_view_fpv_video_feed);
         fpvVideoFeedView.registerLiveVideo(VideoFeeder.getInstance().getSecondaryVideoFeed(), false);

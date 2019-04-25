@@ -1,13 +1,18 @@
 package com.dji.sdk.sample.internal.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.SurfaceTexture;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.TextureView;
 import android.view.TextureView.SurfaceTextureListener;
 import android.view.View;
 
+import com.dji.sdk.sample.internal.controller.DJISampleApplication;
+
+import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -34,6 +39,7 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
     private AtomicLong lastReceivedFrameTime = new AtomicLong(0);
     private Observable timer =
         Observable.timer(100, TimeUnit.MICROSECONDS).observeOn(AndroidSchedulers.mainThread()).repeat();
+    private MyCustomObjectListener listener = null;
 
     //endregion
 
@@ -55,6 +61,10 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
         coverView = view;
     }
 
+    public void setCustomObjectListener(MyCustomObjectListener listener) {
+        this.listener = listener;
+    }
+
     private void init() {
         // Avoid the rending exception in the Android Studio Preview view.
         if (isInEditMode()) {
@@ -62,6 +72,8 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
         }
 
         setSurfaceTextureListener(this);
+
+        //DJICodecManager.YuvDataCallback
         videoDataListener = new VideoFeeder.VideoDataListener() {
 
             @Override
@@ -75,6 +87,12 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
                                                    isPrimaryVideoFeed
                                                    ? UsbAccessoryService.VideoStreamSource.Camera.getIndex()
                                                    : UsbAccessoryService.VideoStreamSource.Fpv.getIndex());
+
+//                    if (listener != null) {
+//                        listener.onBitmapReady(codecManager.yuv);
+//                    }
+//                } else {
+//                    Log.d(DJISampleApplication.TAG, "Houston! Codec manager is null");
                 }
             }
         };
@@ -109,6 +127,12 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
                                                isPrimaryVideoFeed
                                                ? UsbAccessoryService.VideoStreamSource.Camera
                                                : UsbAccessoryService.VideoStreamSource.Fpv);
+            codecManager.setYuvDataCallback(new DJICodecManager.YuvDataCallback() {
+                @Override
+                public void onYuvDataReceived(ByteBuffer byteBuffer, int i, int i1, int i2) {
+
+                }
+            });
         }
     }
 
@@ -134,6 +158,8 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
             videoHeight = codecManager.getVideoHeight();
             adjustAspectRatio(videoWidth, videoHeight);
         }
+        if (listener != null)
+            listener.onBitmapReady(Bitmap.createScaledBitmap(this.getBitmap(), 1280, 720, true));
     }
     //endregion
 
@@ -186,4 +212,9 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
         this.setTransform(txform);
     }
     //endregion
+
+    public interface MyCustomObjectListener {
+        public void onBitmapReady(Bitmap bitmap);
+        //public void onYuvReady(Bitmap bitmap);
+    }
 }
