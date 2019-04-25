@@ -59,6 +59,10 @@ dependencies {
 //             Mavic 2 Pro and Mavic 2 Zoom. It will greatly reducing the size of the APK:
              exclude module: 'library-anti-distortion'
         })
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-ml-vision:19.0.3'
     compileOnly 'com.dji:dji-sdk-provided:4.9'
 
 }
+
+apply plugin: 'com.google.gms.google-services'
