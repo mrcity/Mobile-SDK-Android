@@ -38,6 +38,7 @@
     <string name="component_listview_accessory_aggregation">Accessory Aggregation</string>
     <string name="component_listview_audio_file_list_manager">Audio File List Manager</string>
     <string name="component_listview_live_stream">Live Stream</string>
+    <string name="component_listview_sky_spotter">SkySpotter</string>
 
     <string name="component_listview_sdk_4_0">4.0 New Interfaces</string>
     <string name="component_listview_waypoint_mission_operator">New Waypoint Mission Operator</string>
