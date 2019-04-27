@@ -60,10 +60,12 @@
             android:launchMode="singleTop"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
             </intent-filter>
@@ -81,6 +83,15 @@
             android:name="com.dji.sdk.sample.demo.payload.PayloadSendGetDataActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="landscape"/>
+
+        <activity android:name=".skyspotter.Activity_PrintImagesForQrCodes"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+        <activity android:name=".skyspotter.TacticianActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+
+        </activity>
+
     </application>
 
 </manifest>

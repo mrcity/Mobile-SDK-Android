@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:summary="@string/setting_printer"
+        android:title="@string/setting_printer">
+        <ListPreference
+            android:key="printerModel"
+            android:summary="@string/printer_model_value"
+            android:title="@string/printer_model_title" />
+        <ListPreference
+            android:enabled="true"
+            android:key="port"
+            android:summary="@string/port_value"
+            android:title="@string/port_title" />
+
+        <PreferenceScreen
+            android:defaultValue="@string/printer_text"
+            android:key="printer"
+            android:summary="@string/printer_text"
+            android:title="@string/printer_title"></PreferenceScreen>
+
+        <ListPreference
+            android:key="paperSize"
+            android:summary="@string/paper_size_value"
+            android:title="@string/paper_size_title" />
+        <ListPreference
+            android:entries="@array/orientation"
+            android:entryValues="@array/orientation_values"
+            android:key="orientation"
+            android:summary="@string/orientation_value"
+            android:title="@string/orientation_title" />
+
+        <PreferenceScreen
+            android:key="scaleModelSetting"
+            android:summary="@string/fit_to_page_value"
+            android:title="@string/fit_to_page_title">
+            <ListPreference
+                android:enabled="true"
+                android:entries="@array/fitToPage"
+                android:entryValues="@array/fit_to_page_values"
+                android:key="printMode"
+                android:summary="@string/fit_to_page_value"
+                android:title="@string/fit_to_page_title" />
+
+            <EditTextPreference
+                android:enabled="true"
+                android:key="scaleValue"
+                android:summary="@string/scale_value_value"
+                android:title="@string/scale_value_title" />
+        </PreferenceScreen>
+
+        <EditTextPreference
+            android:enabled="true"
+            android:key="numberOfCopies"
+            android:maxLength="5"
+            android:numeric="integer"
+            android:summary="@string/number_of_copies_value"
+            android:title="@string/number_of_copies_title" />
+
+        <PreferenceScreen
+            android:key="halfToningSetting"
+            android:summary="@string/halftoning_value"
+            android:title="@string/halftoning_title">
+            <ListPreference
+                android:entries="@array/halfToning"
+                android:entryValues="@array/halfToningValues"
+                android:key="halftone"
+                android:summary="@string/halftoning_value"
+                android:title="@string/halftoning_title" />
+
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="imageThresholding"
+                android:summary="@string/image_thresholding_value"
+                android:title="@string/image_thresholding_title" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="savePrnSetting"
+            android:summary="@string/save_prn_path_text"
+            android:title="@string/save_prn_path_title">
+            <PreferenceScreen
+                android:defaultValue="@string/save_prn_path_title"
+                android:key="savePrnPath"
+                android:summary="@string/save_prn_path_text"
+                android:title="@string/save_prn_path_title"></PreferenceScreen>
+
+            <ListPreference
+                android:entries="@array/yes_no_entries"
+                android:entryValues="@array/yes_no_value"
+                android:key="overwrite"
+                android:summary="@string/overwrite_value"
+                android:title="@string/overwrite_title" />
+        </PreferenceScreen>
+
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="skipStatusCheck"
+            android:summary="@string/is_skip_status_check_value"
+            android:title="@string/is_skip_status_check_title" />
+
+        <ListPreference
+            android:entries="@array/check_print_end"
+            android:entryValues="@array/check_print_end_values"
+            android:key="checkPrintEnd"
+            android:summary="@string/check_print_end_value"
+            android:title="@string/check_print_end_title" />
+
+
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="trimTapeAfterData"
+            android:summary="@string/trim_tape_after_data_value"
+            android:title="@string/trim_tape_after_data_title" />
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="rawMode"
+            android:summary="@string/raw_mode_value"
+            android:title="@string/raw_mode_title" />
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="softFocusing"
+            android:summary="@string/soft_focusing_value"
+            android:title="@string/soft_focusing_title" />
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="useLegacyHalftoneEngine"
+            android:summary="@string/use_legacy_halftone_engine_value"
+            android:title="@string/use_legacy_halftone_engine_title" />
+        <ListPreference
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="enabledTethering"
+            android:summary="@string/tethering_value"
+            android:title="@string/tethering_title" />
+        <ListPreference
+            android:entries="@array/work_path_entries"
+            android:key="workPath"
+            android:summary="@string/work_path_value"
+            android:title="@string/work_path_title" />
+
+        <PreferenceScreen
+            android:key="timeoutSetting"
+            android:summary="@string/timeout_text"
+            android:title="@string/timeout_title">
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="processTimeout"
+                android:summary="@string/processTimeout_value"
+                android:title="@string/processTimeout_title" />
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="sendTimeout"
+                android:summary="@string/sendTimeout_value"
+                android:title="@string/sendTimeout_title" />
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="receiveTimeout"
+                android:summary="@string/receiveTimeout_value"
+                android:title="@string/receiveTimeout_title" />
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="connectionTimeout"
+                android:summary="@string/connectionTimeout_value"
+                android:title="@string/connectionTimeout_title" />
+            <EditTextPreference
+                android:enabled="true"
+                android:inputType="number"
+                android:key="closeWaitTime"
+                android:summary="@string/close_wait_time_value"
+                android:title="@string/close_wait_time_title" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/otherSettings_title"></PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="prefIpMacAddress"
+        android:summary="@string/ip_mac_value"
+        android:title="@string/ip_mac_title">
+        <EditTextPreference
+            android:enabled="true"
+            android:key="address"
+            android:summary="@string/address_value"
+            android:title="@string/address_title" />
+        <EditTextPreference
+            android:enabled="true"
+            android:key="macAddress"
+            android:summary="@string/mac_address_value"
+            android:title="@string/mac_address_title" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="prefAlignmentSettings"
+        android:summary="@string/alignment_settings_value"
+        android:title="@string/alignment_settings_title">
+        <ListPreference
+            android:entries="@array/align"
+            android:entryValues="@array/alignValues"
+            android:key="align"
+            android:summary="@string/align_value"
+            android:title="@string/align_title" />
+
+        <EditTextPreference
+            android:enabled="true"
+            android:key="leftMargin"
+            android:maxLength="5"
+            android:numeric="integer"
+            android:summary="@string/left_margin_value"
+            android:title="@string/left_margin_title" />
+
+        <ListPreference
+            android:entries="@array/valign"
+            android:entryValues="@array/valign_values"
+            android:key="valign"
+            android:summary="@string/valign_value"
+            android:title="@string/valign_title" />
+
+        <EditTextPreference
+            android:enabled="true"
+            android:key="topMargin"
+            android:maxLength="5"
+            android:numeric="integer"
+            android:summary="@string/top_margin_value"
+            android:title="@string/top_margin_title" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="prefPJSettings"
+        android:summary="@string/pj_settings_value"
+        android:title="@string/pj_settings_title">
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="pjCarbon"
+            android:summary="@string/is_carbon_value"
+            android:title="@string/is_carbon_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/pj_density_values"
+            android:entryValues="@array/pj_density_values"
+            android:key="pjDensity"
+            android:summary="@string/pj_density_value"
+            android:title="@string/pj_density_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/feed_mode"
+            android:entryValues="@array/feed_mode_values"
+            android:key="pjFeedMode"
+            android:summary="@string/feed_mode_value"
+            android:title="@string/feed_mode_title" />
+
+        <EditTextPreference
+            android:enabled="true"
+            android:key="customPaperWidth"
+            android:maxLength="5"
+            android:numeric="signed"
+            android:summary="@string/custom_paper_width_value"
+            android:title="@string/custom_paper_width_title" />
+        <EditTextPreference
+            android:enabled="true"
+            android:key="customPaperLength"
+            android:maxLength="5"
+            android:numeric="signed"
+            android:summary="@string/custom_paper_length_value"
+            android:title="@string/custom_paper_length_title" />
+        <EditTextPreference
+            android:enabled="true"
+            android:key="customFeed"
+            android:maxLength="5"
+            android:numeric="signed"
+            android:summary="@string/custom_feed_value"
+            android:title="@string/custom_feed_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/pj_paper_kind_values"
+            android:entryValues="@array/pj_paper_kind_values"
+            android:key="pjPaperKind"
+            android:summary="@string/pj_paper_kind_value"
+            android:title="@string/pj_paper_kind_title" />
+        <ListPreference
+            android:entries="@array/align"
+            android:entryValues="@array/alignValues"
+            android:key="paperPosition"
+            android:summary="@string/paper_pos_value"
+            android:title="@string/paper_pos_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="mode9"
+            android:summary="@string/mode9_value"
+            android:title="@string/mode9_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="dashLine"
+            android:summary="@string/dash_line_value"
+            android:title="@string/dash_line_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/pj_speed_values"
+            android:entryValues="@array/pj_speed_values"
+            android:key="pjSpeed"
+            android:summary="@string/pj_speed_value"
+            android:title="@string/pj_speed_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/printer_case"
+            android:entryValues="@array/printer_case_values"
+            android:key="printerCase"
+            android:summary="@string/printer_case_value"
+            android:title="@string/printer_case_title" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="prefPJTDSettings"
+        android:summary="@string/pj_td_settings_value"
+        android:title="@string/pj_td_settings_title">
+        <ListPreference
+            android:enabled="true"
+            android:key="customSetting"
+            android:summary="@string/custom_setting_value"
+            android:title="@string/custom_setting_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/rj_density_values"
+            android:entryValues="@array/rj_density_values"
+            android:key="rjDensity"
+            android:summary="@string/rj_density_value"
+            android:title="@string/rj_density_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="rotate180"
+            android:summary="@string/is_rotate180_value"
+            android:title="@string/is_rotate180_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="peelMode"
+            android:summary="@string/is_peel_mode_value"
+            android:title="@string/is_peel_mode_title" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="prefCutSettings"
+        android:summary="@string/cut_settings_value"
+        android:title="@string/cut_settings_title">
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="autoCut"
+            android:summary="@string/is_auto_cut_value"
+            android:title="@string/is_auto_cut_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="endCut"
+            android:summary="@string/is_end_cut_value"
+            android:title="@string/is_end_cut_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="halfCut"
+            android:summary="@string/half_cut_value"
+            android:title="@string/half_cut_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="specialType"
+            android:summary="@string/special_tape_value"
+            android:title="@string/special_tape_title" />
+        <ListPreference
+            android:entries="@array/print_quality_array"
+            android:entryValues="@array/print_quality_value"
+            android:key="printQuality"
+            android:summary="@string/print_quality_value"
+            android:title="@string/print_quality_title" />
+    </PreferenceScreen>
+
+
+    <PreferenceScreen
+        android:key="prefCutSettingsPT_P3"
+        android:summary="@string/cutSettingsPT_P3_value"
+        android:title="@string/cutSettingsPT_P3_title">
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="endCut"
+            android:summary="@string/is_end_cut_value"
+            android:title="@string/is_end_cut_title" />
+        <ListPreference
+            android:enabled="true"
+            android:entries="@array/yes_no_entries"
+            android:entryValues="@array/yes_no_value"
+            android:key="cutMark"
+            android:summary="@string/cut_mark_value"
+            android:title="@string/cut_mark_title" />
+        <EditTextPreference
+            android:enabled="true"
+            android:key="labelMargin"
+            android:summary="@string/label_margin_value"
+            android:title="@string/label_margin_title" />
+
+    </PreferenceScreen>
+
+</PreferenceScreen>

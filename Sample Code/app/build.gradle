@@ -22,13 +22,14 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
             shrinkResources true
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //minifyEnabled true
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -64,6 +65,11 @@ dependencies {
     implementation fileTree(include: '*.jar', dir: 'libs')
     implementation 'com.github.kenglxn.QRGen:javase:2.5.0'
     compileOnly 'com.dji:dji-sdk-provided:4.9'
+
+    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+
 }
 
 apply plugin: 'com.google.gms.google-services'

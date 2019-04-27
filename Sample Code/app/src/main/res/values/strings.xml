@@ -296,4 +296,748 @@
     <string name="cancel_transmitting">Cancel Transmitting</string>
     <string name="transmit_local_file">Transmit Local File</string>
 
+
+    <string name="menu_settings">Settings</string>
+    <string name="button_print">Print</string>
+    <string name="button_printer_settings">Printer Settings</string>
+    <string name="button_update_firm">Update Firm</string>
+    <string name="button_transfer_template">Transfer Template</string>
+    <string name="button_get_firmver">Get Firm Version</string>
+    <string name="button_get_mediaver">Get Media Version</string>
+    <string name="button_get_serialnum">Get Serial Number</string>
+    <string name="button_get_systemreport">Get System Report</string>
+    <string name="button_get_batteryInfo">Get Battery Info</string>
+    <string name="button_send_mediainfo">Send Media Info</string>
+    <string name="button_check_firm_file">Check Firm File Ver</string>
+    <string name="button_check_media_file">Check Media File Ver</string>
+    <string name="button_remove_template">Remove Template</string>
+    <string name="button_select_file">Select File</string>
+    <string name="button_select">Select</string>
+    <string name="button_add">Add</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_get_list">Get List</string>
+    <string name="button_bluetooth_settings">Bluetooth Settings</string>
+    <string name="button_network_settings">Network Settings</string>
+    <string name="button_device_settings">Device Settings</string>
+    <string name="supported_device">PJ-7XX/RJ-4030Ai/RJ-2XXX</string>
+    <string name="mw_series">MW Series</string>
+    <string name="file_explorer_title">File Explorer</string>
+    <string name="button_printer_status">Printer Status</string>
+    <string name="button_send_binfile">Send File</string>
+    <string name="button_multi_print">Multi Print</string>
+    <string name="text_select_pdz">Select a pdz or blf file</string>
+    <string name="text_select_image">Select image/prn file</string>
+    <string name="text_input_data">Input Data:</string>
+    <string name="text_template_Index">Index:</string>
+    <string name="text_template_name">Name:</string>
+    <string name="text_template_text">Text:</string>
+    <string name="text_template_key">Template Key:</string>
+    <string name="text_template_replace_texts">Replace Texts:</string>
+    <string name="text_select_pdf">Select a pdf file</string>
+    <string name="text_pdf_pages_start">Start Page:</string>
+    <string name="text_pdf_pages_end">End Page:</string>
+    <string name="chkbox_multiple_select">Multiple Select</string>
+    <string name="chkbox_all_pages">All pages</string>
+    <string name="text_print_image">Print Image/Prn File</string>
+    <string name="text_print_pdf">Print Pdf File</string>
+    <string name="text_print_template">Print Template</string>
+    <string name="text_transfer_manager">Manage Templates</string>
+    <string name="text_transfer_pdz">Transfer Template File</string>
+    <string name="text_device_setting">Device Settings</string>
+    <string name="text_remove_template">Remove Template File</string>
+    <string name="text_not_exit_template">Template does not exit.</string>
+    <string name="unable_access">Unable Access…</string>
+    <string name="no_network_device">No Net Printer Found</string>
+    <string name="setting_printer">Basic Settings</string>
+    <string name="printer_title">Printer</string>
+    <string name="printer_text">Select a destination printer</string>
+    <string name="setting_label">Settings</string>
+    <string name="about_label">About</string>
+    <string name="about_title">Brother Print Sdk Demo</string>
+    <string name="about_text">Ver.3.0.13\n© 2018 Brother Industries, Ltd.\n</string>
+    <string name="netPrinterListTitle_label">Net Printer</string>
+    <string name="progress_dialog_message_preparing_connection">Preparing the connection…</string>
+    <string name="progress_dialog_message_createData">Creating the data</string>
+    <string name="progress_dialog_message_sendingData">Sending the data…</string>
+    <string name="progress_dialog_message_sendingPrintingData">Sending the data…</string>
+    <string name="progress_dialog_message_startPrint">Printing the data </string>
+    <string name="progress_dialog_message_dataSent">The data was sent </string>
+    <string name="progress_dialog_message_printed">The printing process was completed </string>
+    <string name="progress_dialog_message_close_connection">Closing the connection</string>
+    <string name="progress_dialog_message_set_paper">Please Set Paper</string>
+    <string name="progress_dialog_message_cooling_start">Printer cooling start</string>
+    <string name="progress_dialog_message_cooling_end">Printer cooling end</string>
+    <string name="progress_dialog_message_waiting_peel">Wait for peeling label</string>
+    <string name="progress_dialog_message_sending_template">File transferring</string>
+    <string name="progress_dialog_message_getting_bluetooth_setting">Getting Bluetooth settings </string>
+    <string name="progress_dialog_message_setting_bluetooth_setting">Transferring Bluetooth settings </string>
+    <string name="progress_dialog_message_removing_template">Removing templates </string>
+    <string name="progress_dialog_message_getting_template">Getting template list </string>
+    <string name="error_message_none">Succeeded</string>
+    <string name="error_message_runtime">Runtime error occurred </string>
+    <string name="printer_model_title">PrinterModel</string>
+    <string name="printer_model_value">Select the printer model </string>
+    <string name="error_message_weong_os">Android OS is not supported</string>
+    <string name="error_message_no_usb">USB device is not found</string>
+    <string name="port_title">Port</string>
+    <string name="port_value">Select the port</string>
+    <string name="address_title">IP address</string>
+    <string name="address_value">Set the number of ip address </string>
+    <string name="mac_address_title">MAC address</string>
+    <string name="mac_address_value">Set the number of mac address </string>
+    <string name="paper_size_title">Paper size</string>
+    <string name="paper_size_value">Select the paper size </string>
+    <string name="orientation_title">Printing orientation</string>
+    <string name="orientation_value">Select the printing orientation </string>
+    <string name="trim_tape_after_data_title">Cutting zero lines </string>
+    <string name="trim_tape_after_data_value">Select the cutting zero lines</string>
+
+    <string name="tethering_title">Tethering</string>
+    <string name="tethering_value">Select the tethering</string>
+
+
+    <string-array name="orientation">
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+    <string-array name="orientation_values">
+        <item>PORTRAIT</item>
+        <item>LANDSCAPE</item>
+    </string-array>
+
+    <string name="number_of_copies_title">Number of copies</string>
+    <string name="number_of_copies_value">Set the number of copies </string>
+    <string name="halftoning_title">Half toning</string>
+    <string name="halftoning_value">Select the half toning method </string>
+    <string name="overwrite_title">Overwrite the file</string>
+    <string name="overwrite_value">Select the overwrite mode </string>
+    <string name="image_thresholding_title">Threshold of simple binary</string>
+    <string name="image_thresholding_value">Select the threshold </string>
+    <string name="scale_value_title">Scale value</string>
+    <string name="scale_value_value">Select the scale value </string>
+
+
+    <string-array name="halfToning">
+        <item>Threshold</item>
+        <item>Pattern dithering</item>
+        <item>Error diffusion</item>
+    </string-array>
+    <string-array name="halfToningValues">
+        <item>THRESHOLD</item>
+        <item>PATTERNDITHER</item>
+        <item>ERRORDIFFUSION</item>
+    </string-array>
+
+    <string name="fit_to_page_title">Fit to page</string>
+    <string name="fit_to_page_value">Select if fitting to page </string>
+
+
+    <string-array name="check_print_end">
+        <item>Not check</item>
+        <item>Skip last page</item>
+        <item>Check</item>
+    </string-array>
+    <string-array name="check_print_end_values">
+        <item>CPE_NO_CHECK</item>
+        <item>CPE_SKIP_LAST</item>
+        <item>CPE_CHECK</item>
+    </string-array>
+    <string-array name="fitToPage">
+        <item>ORIGINAL</item>
+        <item>FIT_TO_PAGE</item>
+        <item>CUSTOM</item>
+        <item>FIT_TO_PAPER</item>
+    </string-array>
+    <string-array name="fit_to_page_values">
+        <item>ORIGINAL</item>
+        <item>FIT_TO_PAGE</item>
+        <item>SCALE</item>
+        <item>FIT_TO_PAPER</item>
+    </string-array>
+
+    <string-array name="printer_case">
+        <item>PJ_ROLLCASE_OFF</item>
+        <item>PJ_ROLLCASE_ON</item>
+        <item>PJ_ROLLCASE_WITH_ANTICURL</item>
+    </string-array>
+    <string-array name="printer_case_values">
+        <item>PJ_ROLLCASE_OFF</item>
+        <item>PJ_ROLLCASE_ON</item>
+        <item>PJ_ROLLCASE_WITH_ANTICURL</item>
+    </string-array>
+    <string-array name="pj_speed_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string name="is_carbon_title">Carbon</string>
+    <string name="is_carbon_value">Select the carbon</string>
+    <string name="pj_density_title">PJ Density</string>
+    <string name="pj_density_value">Select the PJ density</string>
+    <string name="mode9_title">Mode9</string>
+    <string name="mode9_value">Select the Mode9</string>
+    <string name="pj_speed_title">PJ Speed</string>
+    <string name="pj_speed_value">Select the PJ speed</string>
+
+    <string name="printer_case_title">Printer case</string>
+    <string name="printer_case_value">Select the printer case</string>
+    <string name="print_quality_title">Print quality</string>
+    <string name="print_quality_value">Select the quality</string>
+
+
+    <string name="is_skip_status_check_title">Skip Status Check</string>
+    <string name="is_skip_status_check_value">Select Skip Status Check mode</string>
+    <string name="check_print_end_title">Check the print end</string>
+    <string name="check_print_end_value">Check the print end</string>
+    <string-array name="pj_density_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="feed_mode_title">Feed mode</string>
+    <string name="feed_mode_value">Select how to feed paper</string>
+
+    <string name="pj_paper_kind_title">Paper Kind</string>
+    <string name="pj_paper_kind_value">Select paper kind</string>
+
+    <string-array name="feed_mode">
+        <item>no feed（roll）</item>
+        <item>fixed page size feed（roll）</item>
+        <item>one page feed（cut paper）</item>
+        <item>one page feed（roll with mark）</item>
+    </string-array>
+    <string-array name="feed_mode_values">
+        <item>PJ_FEED_MODE_FREE</item>
+        <item>PJ_FEED_MODE_FIXEDPAGE</item>
+        <item>PJ_FEED_MODE_ENDOFPAGE</item>
+        <item>PJ_FEED_MODE_ENDOFPAGERETRACT</item>
+    </string-array>
+
+    <string-array name="pj_paper_kind_values">
+        <item>PJ_ROLL</item>
+        <item>PJ_CUT_PAPER</item>
+    </string-array>
+
+    <string name="align_title">Align</string>
+    <string name="align_value">Select the align</string>
+    <string name="paper_pos_title">Paper Position</string>
+    <string name="paper_pos_value">Select the Paper Position</string>
+
+    <string-array name="align">
+        <item>LEFT</item>
+        <item>CENTER</item>
+        <item>RIGHT</item>
+    </string-array>
+    <string-array name="alignValues">
+        <item>LEFT</item>
+        <item>CENTER</item>
+        <item>RIGHT</item>
+    </string-array>
+
+    <string name="valign_title">Valign</string>
+    <string name="valign_value">Select the valign</string>
+
+    <string-array name="valign">
+        <item>TOP</item>
+        <item>MIDDLE</item>
+        <item>BOTTOM</item>
+    </string-array>
+    <string-array name="valign_values">
+        <item>TOP</item>
+        <item>MIDDLE</item>
+        <item>BOTTOM</item>
+    </string-array>
+
+    <string name="left_margin_title">Left margin</string>
+    <string name="left_margin_value">Set the left margin </string>
+    <string name="top_margin_title">Top margin</string>
+    <string name="top_margin_value">Set the top margin </string>
+    <string name="custom_paper_width_title">Custom Paper Width</string>
+    <string name="custom_paper_width_value">Set the Width of custom Paper </string>
+    <string name="custom_paper_length_title">Custom Paper Length</string>
+    <string name="custom_paper_length_value">Set the Length of custom Paper </string>
+    <string name="custom_setting_title">Custom Setting</string>
+    <string name="custom_setting_value">Select a custom setting file</string>
+    <string name="custom_feed_title">Feed Paper Setting</string>
+    <string name="custom_feed_value">Set Length of Feeding Paper</string>
+    <string name="rj_density_title">Density</string>
+    <string name="rj_density_value">Select density</string>
+
+    <string-array name="rj_density_values">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string name="is_rotate180_title">Rotate 180</string>
+    <string name="is_rotate180_value">Rotate 180</string>
+
+    <string-array name="yes_no_entries">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+    <string-array name="yes_no_value">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+
+    <string name="dash_line_title">Dash Line Print</string>
+    <string name="dash_line_value">Dash Line Print</string>
+
+
+    <string name="is_end_cut_title">End Cut</string>
+    <string name="is_end_cut_value">do end cut or not</string>
+    <string name="is_auto_cut_title">Auto Cut</string>
+    <string name="is_auto_cut_value">do auto cut or not</string>
+    <string name="is_peel_mode_title">PeelMode</string>
+    <string name="is_peel_mode_value">Wait for peeling label</string>
+    <string name="otherSettings_title">Other Settings</string>
+    <string name="ip_mac_title">IP/MAC Address</string>
+    <string name="ip_mac_value">Set the IP/MAC Address</string>
+    <string name="alignment_settings_title">Alignment Settings</string>
+    <string name="alignment_settings_value">Set the Alignment Settings</string>
+    <string name="pj_settings_title">PJ Settings</string>
+    <string name="pj_settings_value">Set the PJ Settings</string>
+    <string name="pj_td_settings_title">RJ/TD Settings</string>
+    <string name="pj_td_settings_value">Set the RJ/TD Settings</string>
+    <string name="cut_settings_value">Set the Cut Settings</string>
+    <string name="cut_settings_title">Cut Settings</string>
+    <string name="cutSettingsPT_P3_value">Set the Cut Settings</string>
+    <string name="cutSettingsPT_P3_title">PT-P3 Cut Settings</string>
+
+    <string name="no_bluetooth_device">No Bluetooth Printer Found</string>
+    <string name="button_refresh">Refresh</string>
+    <string name="button_settings">Settings</string>
+    <string name="button_get">Get</string>
+    <string name="button_update">Set</string>
+    <string name="text_ssp">SSP Setting</string>
+    <string name="text_power_saving">Power-saving</string>
+    <string name="text_net_bootmode">	Network Settings on Power On(BT/USB)	</string>
+    <string name="text_net_interface">	Selected Interface(BT/USB)</string>
+    <string name="text_net_used_ipv6">	IPv6 usage	</string>
+    <string name="text_net_priority_ipv6">	Priority on IPv6 address	</string>
+    <string name="text_net_ip4_staticmode">	Enable static IP Address	</string>
+    <string name="text_net_ipv4_static_address">	IP Address	</string>
+    <string name="text_net_subnetmask">	Subnet Mask	</string>
+    <string name="text_net_gateway">	Gateway	</string>
+    <string name="text_net_dns_ipv4_bootmethod">	Boot Method	</string>
+    <string name="text_net_primary_dns_ipv4address">	Primary DNS Server IP Address	</string>
+    <string name="text_net_second_dns_ipv4address">	Secondary DNS Server IP Address	</string>
+    <string name="text_ipv6_setting">	IPv6 settings</string>
+    <string name="text_net_ip6_staticmode">	Enable Static IPv6 Address	</string>
+    <string name="text_net_ipv6_static_address">	Static IPv6 Address	</string>
+    <string name="text_net_primary_dns_ipv6address">	Primary DNS Server IPv6 Address	</string>
+    <string name="text_net_second_dns_ipv6address">	Secondary DNS Server IPv6 Address	</string>
+    <string name="text_net_ipv6address_list">	IPv6 Address List(Read only)		</string>
+    <string name="text_net_communication_mode">	Communication Mode	</string>
+    <string name="text_net_ssid">	SSID	</string>
+    <string name="text_net_channel">	Channel	</string>
+    <string name="text_net_authentication_method">	Authentication Method	</string>
+    <string name="text_net_encryption_mode">	Encryption Mode	</string>
+    <string name="text_net_wepkey">	WEP Key(Write only)	</string>
+    <string name="text_net_passphrase">	Passphrase(Write only)	</string>
+    <string name="text_net_user_Id">	User ID(Write only)	</string>
+    <string name="text_net_password">	Password(Write only)	</string>
+    <string name="text_net_nodenam">	Node Name	</string>
+    <string name="text_wirelessdirect_key_create_mode">	SSID/Network Key Generation(BT/USB)	</string>
+    <string name="text_wirelessdirect_ssid">	SSID(BT/USB)	</string>
+    <string name="text_wirelessdirect_network_key">	Network Key(Write only)(BT/USB)</string>
+    <string name="text_printer_power_off_time">	Auto Power Off	</string>
+    <string name="text_printer_power_off_time_battery">	Auto Power Off(Li-ion)	</string>
+    <string name="text_print_jpeg_halftone">	JPEG Printing Halftone(BT/USB)	</string>
+    <string name="text_print_jpeg_scale">	JPEG Printing Scale(BT/USB)	</string>
+    <string name="text_print_speed">	Print Speed(BT/USB)	</string>
+    <string name="text_print_density">	Print Density(BT/USB)	</string>
+    <string name="text_bt_isdiscoverable">	Visible to Other Devices(BT/USB)	</string>
+    <string name="text_bt_devicename">	Bluetooth Device Name(BT/USB)	</string>
+    <string name="text_bt_auto_connection">Bluetooth Auto Connection(BT/USB)</string>
+
+    <string name="text_bt_bootmode">	Bluetooth on Power On(BT/USB)	</string>
+    <string name="text_wifi_setting">WiFi settings</string>
+    <string name="text_wirelessdirect_setting">Wireless Direct settings</string>
+    <string name="text_printer_setting">Printer settings</string>
+    <string name="text_bluetooth_setting">Bluetooth settings</string>
+    <string name="text_no_data">(NO DATA)</string>
+
+    <string-array name="bootmode_array">
+        <item>On by default	</item>
+        <item>Off by default	</item>
+        <item>Keep Current State	</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="bootmode_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item></item>
+    </string-array>
+    <string-array name="net_interface_array">
+        <item>OFF</item>
+        <item>Wireless LAN</item>
+        <item>Wireless Direct</item>
+        <item>Wireless LAN and Wireless Direct</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="net_interface_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item></item>
+    </string-array>
+    <string-array name="enable_array">
+        <item>Disable</item>
+        <item>Enable</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="enable_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="chanel_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="chanel_array_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item></item>
+    </string-array>
+    <string-array name="ip_address_array">
+        <item>AUTO</item>
+        <item>BOOTP</item>
+        <item>DHCP</item>
+        <item>RARP</item>
+        <item>STATIC</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="ip_address_array_value">
+        <item>0</item>
+        <item>5</item>
+        <item>3</item>
+        <item>6</item>
+        <item>7</item>
+        <item></item>
+    </string-array>
+    <string-array name="communication_mode_array">
+        <item>Ad hoc</item>
+        <item>Infrastructure</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="communication_mode_array_value">
+        <item>2</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="authentication_method_array">
+        <item>Open System</item>
+        <item>Shared Key</item>
+        <item>WPA/WPA2-PSK	</item>
+        <item>LEAP CKIP	</item>
+        <item>EAP-FAST/NONE	</item>
+        <item>EAP-FAST/MS-CHAPv2</item>
+        <item>EAP-FAST/GTC</item>
+        <item>PEAP/MS-CHAPv2</item>
+        <item>PEAP/GTC</item>
+        <item>EAP-TTLS/CHAP</item>
+        <item>EAP-TTLS/MS-CHAP</item>
+        <item>EAP-TTLS/MS-CHAPv2</item>
+        <item>EAP-TTLS/PAP TKIP</item>
+        <item>EAP-TLS</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="authentication_method_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item></item>
+    </string-array>
+    <string-array name="net_encryptionmode_array">
+        <item>None</item>
+        <item>WEP</item>
+        <item>TKIP+AES</item>
+        <item>AES</item>
+        <item>CKIP</item>
+        <item>TKIP</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="net_encryptionmode_array_value">
+        <item>1</item>
+        <item>2</item>
+        <item>8</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+        <item></item>
+    </string-array>
+    <string-array name="dns_mode_array">
+        <item>AUTO</item>
+        <item>STATIC</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="dns_mode_array_value">
+        <item>2</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="key_create_mode_array">
+        <item>STATIC</item>
+        <item>AUTO</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="key_create_mode_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="bt_devicename_array">
+        <item>Not Discoverable</item>
+        <item>Discoverable</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="bt_devicename_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="jpeg_halftone_array">
+        <item>Binary	</item>
+        <item>	Error Diffusion	</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="jpeg_halftone_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item></item>
+    </string-array>
+    <string-array name="pj_density_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="pj_density_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="rj_density_array">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="rj_density_array_value">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="pj_speed_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>@string/text_no_data</item>
+    </string-array>
+    <string-array name="pj_speed_array_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="print_quality_array">
+        <item>LOW_RESOLUTION</item>
+        <item>NORMAL</item>
+        <item>DOUBLE_SPEED</item>
+        <item>HIGH_RESOLUTION</item>
+    </string-array>
+    <string-array name="print_quality_value">
+        <item>LOW_RESOLUTION</item>
+        <item>NORMAL</item>
+        <item>DOUBLE_SPEED</item>
+        <item>HIGH_RESOLUTION</item>
+    </string-array>
+
+
+    <string name="search_printer">Searching…</string>
+    <string name="end_title">End</string>
+    <string name="end_message">Back to Launcher</string>
+    <string name="close_message">Close Application</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+    <string name="battery_full">Full</string>
+    <string name="battery_middle">Middle</string>
+    <string name="battery_weak">Weak</string>
+    <string name="battery_charge">Need charging</string>
+    <string name="ac_adapter">AC adapter</string>
+    <string name="progress_dialog_message_communication_start">Start communication…</string>
+    <string name="close_connect">closeing…</string>
+    <string name="bluetooth_printer_list_title_label">Bluetooth Printer</string>
+    <string name="progress_dialog_message_transfer_start">Transfer Start…</string>
+    <string name="folder_name">Folder Name</string>
+    <string name="error_input">wrong input</string>
+    <string name="msg_title_warning">Warning</string>
+    <string name="button_next_print">Next Template</string>
+    <string name="cancel_printer_msg">Is cancelling, please wait</string>
+    <string name="template_encoding">Encoding:</string>
+
+
+    <string-array name="ssp_array">
+        <item>(NO CHANGE)</item>
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="power_mode_array">
+        <item>(NO CHANGE)</item>
+        <item>Connection time priority</item>
+        <item>Standard</item>
+        <item>Power-saving mode priority</item>
+    </string-array>
+
+
+    <string name="half_cut_title">Half Cut(PT Only)</string>
+    <string name="half_cut_value">do half cut or not</string>
+    <string name="special_tape_title">Special tape paper(PT Only)</string>
+    <string name="special_tape_value">is special tape paper</string>
+    <string name="cut_mark_title">Cut Mark</string>
+    <string name="cut_mark_value">do cut mark or not</string>
+    <string name="label_margin_title">Mergine</string>
+    <string name="label_margin_value">Select Mergine</string>
+
+
+    <string name="save_prn_path_title">Save prn file</string>
+    <string name="save_prn_path_text">Select the destination</string>
+    <string name="save_folder_title">Save the folder</string>
+    <string name="save_folder_text">Select the folder</string>
+    <string name="save_file_title">Save the file</string>
+
+    <string name="raw_mode_title">Raw mode</string>
+    <string name="raw_mode_value">Select the raw mode</string>
+
+
+    <string name="soft_focusing_title">Lighter</string>
+    <string name="soft_focusing_value">Select the lighter</string>
+    <string name="use_legacy_halftone_engine_title">Use legacy halftone engine</string>
+    <string name="use_legacy_halftone_engine_value">Select the Use legacy halftone engine</string>
+
+    <string name="timeout_title">Timeout</string>
+    <string name="timeout_text">Set the timeout </string>
+    <string name="processTimeout_value">Time-out period</string>
+    <string name="processTimeout_title">Set overall time-out time </string>
+    <string name="sendTimeout_value">Set transmission waiting time</string>
+    <string name="sendTimeout_title">Transmission waiting time</string>
+    <string name="receiveTimeout_title">Reception waiting time</string>
+    <string name="receiveTimeout_value">Set reception waiting time </string>
+    <string name="connectionTimeout_title">Connect waiting time</string>
+    <string name="connectionTimeout_value">Set connect waiting time </string>
+    <string name="close_wait_time_value">Close Time-out period</string>
+    <string name="close_wait_time_title">Set close waiting time</string>
+
+    <string name="work_path_value">Select the work path</string>
+    <string name="work_path_title">Work Folder</string>
+
+    <string-array name="work_path_entries">
+        <item>Unspecified</item>
+        <item>In-app folder</item>
+        <item>External folder </item>
+    </string-array>
+
+
 </resources>
