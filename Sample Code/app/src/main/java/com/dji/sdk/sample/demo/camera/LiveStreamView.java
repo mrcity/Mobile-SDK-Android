@@ -109,7 +109,7 @@ public class LiveStreamView extends LinearLayout implements PresentableView, Vie
                 //Log.d(DJISampleApplication.TAG, "New frame detected; TODO - run ML object detection here");
                 /*runInBackground(
                         new Runnable() {
-                            @Override
+                            @Overrided
                             public void run() {
                                 final long startTime = SystemClock.uptimeMillis();
                                 final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
