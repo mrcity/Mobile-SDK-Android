@@ -23,6 +23,7 @@ import com.dji.sdk.sample.demo.camera.PushCameraDataView;
 import com.dji.sdk.sample.demo.camera.RecordVideoView;
 import com.dji.sdk.sample.demo.camera.SetGetISOView;
 import com.dji.sdk.sample.demo.camera.ShootSinglePhotoView;
+import com.dji.sdk.sample.demo.camera.SkySpotterView;
 import com.dji.sdk.sample.demo.camera.VideoFeederView;
 import com.dji.sdk.sample.demo.camera.XT2CameraView;
 import com.dji.sdk.sample.demo.datalocker.AccessLockerView;
@@ -81,7 +82,8 @@ public class DemoListView extends FrameLayout {
         ListBuilder builder = new ListBuilder();
         builder.addGroup(R.string.component_listview_sdk_4_9,
                 false,
-                new GroupItem(R.string.component_listview_live_stream, LiveStreamView.class));
+                new GroupItem(R.string.component_listview_live_stream, LiveStreamView.class),
+                new GroupItem(R.string.component_listview_sky_spotter, SkySpotterView.class));
         builder.addGroup(R.string.component_listview_sdk_4_8,
                          false,
                          new GroupItem(R.string.component_listview_access_locker, AccessLockerView.class),

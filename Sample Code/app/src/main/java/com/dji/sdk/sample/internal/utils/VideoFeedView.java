@@ -10,6 +10,9 @@ import android.view.TextureView;
 import android.view.TextureView.SurfaceTextureListener;
 import android.view.View;
 
+import com.brother.ptouch.sdk.BatteryInfo;
+import com.brother.ptouch.sdk.Printer;
+import com.brother.ptouch.sdk.PrinterInfo;
 import com.dji.sdk.sample.internal.controller.DJISampleApplication;
 
 import java.nio.ByteBuffer;
@@ -159,7 +162,11 @@ public class VideoFeedView extends TextureView implements SurfaceTextureListener
             adjustAspectRatio(videoWidth, videoHeight);
         }
         if (listener != null)
-            listener.onBitmapReady(Bitmap.createScaledBitmap(this.getBitmap(), 1280, 720, true));
+            try {
+                listener.onBitmapReady(Bitmap.createScaledBitmap(this.getBitmap(), 2000, 1500, true));
+            } catch (Exception e) {
+                Log.d(DJISampleApplication.TAG, "Couldn't get bitmap from Surface Update");
+            }
     }
     //endregion
 
