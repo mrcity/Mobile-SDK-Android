@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".skyspotter.TacticianActivity">
 
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="113dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="60dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_print_qr_codes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print QR Codes"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter IDs or names for squadron participants in the fields below."
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="21dp" />
+
 </android.support.constraint.ConstraintLayout>
